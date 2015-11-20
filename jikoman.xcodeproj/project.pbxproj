@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED72AFFF1BFF287800B84202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72AFFE1BFF287800B84202 /* main.m */; };
+		ED72B0021BFF287800B84202 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B0011BFF287800B84202 /* AppDelegate.m */; };
+		ED72B0051BFF287800B84202 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B0041BFF287800B84202 /* ViewController.m */; };
+		ED72B0081BFF287800B84202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED72B0061BFF287800B84202 /* Main.storyboard */; };
+		ED72B00A1BFF287800B84202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED72B0091BFF287800B84202 /* Assets.xcassets */; };
+		ED72B00D1BFF287800B84202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED72B00B1BFF287800B84202 /* LaunchScreen.storyboard */; };
+		ED72B0181BFF287800B84202 /* jikomanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B0171BFF287800B84202 /* jikomanTests.m */; };
+		ED72B0231BFF287800B84202 /* jikomanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B0221BFF287800B84202 /* jikomanUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED72B0141BFF287800B84202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED72AFF21BFF287800B84202 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED72AFF91BFF287800B84202;
+			remoteInfo = jikoman;
+		};
+		ED72B01F1BFF287800B84202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED72AFF21BFF287800B84202 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED72AFF91BFF287800B84202;
+			remoteInfo = jikoman;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED72AFFA1BFF287800B84202 /* jikoman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jikoman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED72AFFE1BFF287800B84202 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED72B0001BFF287800B84202 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED72B0011BFF287800B84202 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED72B0031BFF287800B84202 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED72B0041BFF287800B84202 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED72B0071BFF287800B84202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED72B0091BFF287800B84202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED72B00C1BFF287800B84202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED72B00E1BFF287800B84202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED72B0131BFF287800B84202 /* jikomanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jikomanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED72B0171BFF287800B84202 /* jikomanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jikomanTests.m; sourceTree = "<group>"; };
+		ED72B0191BFF287800B84202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED72B01E1BFF287800B84202 /* jikomanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jikomanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED72B0221BFF287800B84202 /* jikomanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jikomanUITests.m; sourceTree = "<group>"; };
+		ED72B0241BFF287800B84202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED72AFF71BFF287800B84202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED72B0101BFF287800B84202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED72B01B1BFF287800B84202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED72AFF11BFF287800B84202 = {
+			isa = PBXGroup;
+			children = (
+				ED72AFFC1BFF287800B84202 /* jikoman */,
+				ED72B0161BFF287800B84202 /* jikomanTests */,
+				ED72B0211BFF287800B84202 /* jikomanUITests */,
+				ED72AFFB1BFF287800B84202 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED72AFFB1BFF287800B84202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED72AFFA1BFF287800B84202 /* jikoman.app */,
+				ED72B0131BFF287800B84202 /* jikomanTests.xctest */,
+				ED72B01E1BFF287800B84202 /* jikomanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED72AFFC1BFF287800B84202 /* jikoman */ = {
+			isa = PBXGroup;
+			children = (
+				ED72B0001BFF287800B84202 /* AppDelegate.h */,
+				ED72B0011BFF287800B84202 /* AppDelegate.m */,
+				ED72B0031BFF287800B84202 /* ViewController.h */,
+				ED72B0041BFF287800B84202 /* ViewController.m */,
+				ED72B0061BFF287800B84202 /* Main.storyboard */,
+				ED72B0091BFF287800B84202 /* Assets.xcassets */,
+				ED72B00B1BFF287800B84202 /* LaunchScreen.storyboard */,
+				ED72B00E1BFF287800B84202 /* Info.plist */,
+				ED72AFFD1BFF287800B84202 /* Supporting Files */,
+			);
+			path = jikoman;
+			sourceTree = "<group>";
+		};
+		ED72AFFD1BFF287800B84202 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED72AFFE1BFF287800B84202 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED72B0161BFF287800B84202 /* jikomanTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED72B0171BFF287800B84202 /* jikomanTests.m */,
+				ED72B0191BFF287800B84202 /* Info.plist */,
+			);
+			path = jikomanTests;
+			sourceTree = "<group>";
+		};
+		ED72B0211BFF287800B84202 /* jikomanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED72B0221BFF287800B84202 /* jikomanUITests.m */,
+				ED72B0241BFF287800B84202 /* Info.plist */,
+			);
+			path = jikomanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED72AFF91BFF287800B84202 /* jikoman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED72B0271BFF287800B84202 /* Build configuration list for PBXNativeTarget "jikoman" */;
+			buildPhases = (
+				ED72AFF61BFF287800B84202 /* Sources */,
+				ED72AFF71BFF287800B84202 /* Frameworks */,
+				ED72AFF81BFF287800B84202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jikoman;
+			productName = jikoman;
+			productReference = ED72AFFA1BFF287800B84202 /* jikoman.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED72B0121BFF287800B84202 /* jikomanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED72B02A1BFF287800B84202 /* Build configuration list for PBXNativeTarget "jikomanTests" */;
+			buildPhases = (
+				ED72B00F1BFF287800B84202 /* Sources */,
+				ED72B0101BFF287800B84202 /* Frameworks */,
+				ED72B0111BFF287800B84202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED72B0151BFF287800B84202 /* PBXTargetDependency */,
+			);
+			name = jikomanTests;
+			productName = jikomanTests;
+			productReference = ED72B0131BFF287800B84202 /* jikomanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED72B01D1BFF287800B84202 /* jikomanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED72B02D1BFF287800B84202 /* Build configuration list for PBXNativeTarget "jikomanUITests" */;
+			buildPhases = (
+				ED72B01A1BFF287800B84202 /* Sources */,
+				ED72B01B1BFF287800B84202 /* Frameworks */,
+				ED72B01C1BFF287800B84202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED72B0201BFF287800B84202 /* PBXTargetDependency */,
+			);
+			name = jikomanUITests;
+			productName = jikomanUITests;
+			productReference = ED72B01E1BFF287800B84202 /* jikomanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED72AFF21BFF287800B84202 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "HIroki Taniguti";
+				TargetAttributes = {
+					ED72AFF91BFF287800B84202 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					ED72B0121BFF287800B84202 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = ED72AFF91BFF287800B84202;
+					};
+					ED72B01D1BFF287800B84202 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = ED72AFF91BFF287800B84202;
+					};
+				};
+			};
+			buildConfigurationList = ED72AFF51BFF287800B84202 /* Build configuration list for PBXProject "jikoman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED72AFF11BFF287800B84202;
+			productRefGroup = ED72AFFB1BFF287800B84202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED72AFF91BFF287800B84202 /* jikoman */,
+				ED72B0121BFF287800B84202 /* jikomanTests */,
+				ED72B01D1BFF287800B84202 /* jikomanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED72AFF81BFF287800B84202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED72B00D1BFF287800B84202 /* LaunchScreen.storyboard in Resources */,
+				ED72B00A1BFF287800B84202 /* Assets.xcassets in Resources */,
+				ED72B0081BFF287800B84202 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED72B0111BFF287800B84202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED72B01C1BFF287800B84202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED72AFF61BFF287800B84202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED72B0051BFF287800B84202 /* ViewController.m in Sources */,
+				ED72B0021BFF287800B84202 /* AppDelegate.m in Sources */,
+				ED72AFFF1BFF287800B84202 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED72B00F1BFF287800B84202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED72B0181BFF287800B84202 /* jikomanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED72B01A1BFF287800B84202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED72B0231BFF287800B84202 /* jikomanUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED72B0151BFF287800B84202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED72AFF91BFF287800B84202 /* jikoman */;
+			targetProxy = ED72B0141BFF287800B84202 /* PBXContainerItemProxy */;
+		};
+		ED72B0201BFF287800B84202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED72AFF91BFF287800B84202 /* jikoman */;
+			targetProxy = ED72B01F1BFF287800B84202 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED72B0061BFF287800B84202 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED72B0071BFF287800B84202 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED72B00B1BFF287800B84202 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED72B00C1BFF287800B84202 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED72B0251BFF287800B84202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED72B0261BFF287800B84202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED72B0281BFF287800B84202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = jikoman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikoman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED72B0291BFF287800B84202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = jikoman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikoman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED72B02B1BFF287800B84202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = jikomanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikomanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jikoman.app/jikoman";
+			};
+			name = Debug;
+		};
+		ED72B02C1BFF287800B84202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = jikomanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikomanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jikoman.app/jikoman";
+			};
+			name = Release;
+		};
+		ED72B02E1BFF287800B84202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = jikomanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikomanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = jikoman;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		ED72B02F1BFF287800B84202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = jikomanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikomanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = jikoman;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED72AFF51BFF287800B84202 /* Build configuration list for PBXProject "jikoman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED72B0251BFF287800B84202 /* Debug */,
+				ED72B0261BFF287800B84202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED72B0271BFF287800B84202 /* Build configuration list for PBXNativeTarget "jikoman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED72B0281BFF287800B84202 /* Debug */,
+				ED72B0291BFF287800B84202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED72B02A1BFF287800B84202 /* Build configuration list for PBXNativeTarget "jikomanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED72B02B1BFF287800B84202 /* Debug */,
+				ED72B02C1BFF287800B84202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED72B02D1BFF287800B84202 /* Build configuration list for PBXNativeTarget "jikomanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED72B02E1BFF287800B84202 /* Debug */,
+				ED72B02F1BFF287800B84202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED72AFF21BFF287800B84202 /* Project object */;
+}
