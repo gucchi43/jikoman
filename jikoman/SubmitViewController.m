@@ -229,33 +229,45 @@
     PFObject *ichizen = [PFObject objectWithClassName:@"Ichizen"];
     ichizen[@"text"] = self.submitTextView.text;
     
-    PHImageManager *manager = [PHImageManager defaultManager];
-    [self.imagePickerController.selectedAssets enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        // parse用のimageData取得
-        [manager requestImageDataForAsset:obj
-                                  options:nil
-                            resultHandler:^(NSData * _Nullable imageData,
-                                            NSString * _Nullable dataUTI,
-                                            UIImageOrientation orientation,
-                                            NSDictionary * _Nullable info) {
-                                PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"img%ld", idx + 1] data:imageData];
-                                ichizen[[NSString stringWithFormat:@"Img%ld", idx + 1]] = imageFile;
-                                if (idx + 1 == self.imagePickerController.selectedAssets.count) {
-                                    NSLog(@"最後？");
-                                    NSLog(@"text　Parseに投げれたぜ！");
-                                    [ichizen saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                                        if (!succeeded) {
-                                            NSLog(@"投稿失敗。 %@", error);
-                                        } else {
-                                            NSLog(@"投稿成功");
-                                            [self dismissViewControllerAnimated:YES completion:nil];
-                                        }
-                                    }];
-                                }
-                            }];
-    }];
-}
+    if (self.imagePickerController.selectedAssets.count > 0) {
+        PHImageManager *manager = [PHImageManager defaultManager];
+        [self.imagePickerController.selectedAssets enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            // parse用のimageData取得
+            [manager requestImageDataForAsset:obj
+                                      options:nil
+                                resultHandler:^(NSData * _Nullable imageData,
+                                                NSString * _Nullable dataUTI,
+                                                UIImageOrientation orientation,
+                                                NSDictionary * _Nullable info) {
+                                    PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"img%ld", idx + 1] data:imageData];
+                                    ichizen[[NSString stringWithFormat:@"Img%ld", idx + 1]] = imageFile;
+                                    if (idx + 1 == self.imagePickerController.selectedAssets.count) {
+                                        NSLog(@"最後？");
+                                        NSLog(@"text　Parseに投げれたぜ！");
+                                        [ichizen saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                                            if (!succeeded) {
+                                                NSLog(@"投稿失敗。 %@", error);
+                                            } else {
+                                                NSLog(@"投稿成功");
+                                                [self dismissViewControllerAnimated:YES completion:nil];
+                                            }
+                                        }];
+                                    }
+                                }];
+        }];
+    } else {
+        [ichizen saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            if (!succeeded) {
+                NSLog(@"投稿失敗。 %@", error);
+            } else {
+                NSLog(@"投稿成功");
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+        }];
+    }
     
+}
+
 /*
 #pragma mark - Navigation
 
