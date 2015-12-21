@@ -25,19 +25,6 @@
 @property (nonatomic)ImagePreviewView *imagePreviewView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-@property (nonatomic) NSMutableArray *imgArray;
-
-@property (nonatomic) NSData *imgData;
-
-@property (nonatomic) NSData *imgData1;
-@property (nonatomic) NSData *imgData2;
-@property (nonatomic) NSData *imgData3;
-@property (nonatomic) NSData *imgData4;
-
-
-
-- (IBAction)sendButtonTap:(id)sender;
-
 @end
 
 
@@ -151,11 +138,10 @@
                           contentMode:PHImageContentModeAspectFit
                               options:options
                         resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            imageView.image = result;
-        }];
+                            imageView.image = result;
+                        }];
     }];
-};
-
+}
 
 //
 //プレビュー画面のリサイズ
@@ -170,19 +156,12 @@
     }
 }
 
-
-
 #pragma mark - QBImagePickerControllerDelegate method
 //とってきたデータをimageに変換する
-- (void)qb_imagePickerController:(QBImagePickerController *)imagePickerController
-          didFinishPickingAssets:(NSArray *)assets{
-    
+- (void)qb_imagePickerController:(QBImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets {
     NSLog(@"%@", assets);
     PHImageManager *manager = [PHImageManager defaultManager];
     
-//    空のimgArray作成
-    self.imgArray = @[].mutableCopy;
-
 //    選択した配列でしこループ
 //    第一引数に配列データ、
 //    第二引数に何番目のデータなのかを表す数値データ、
@@ -208,23 +187,7 @@
         {
 //        PHAssetのデータをimegeに変換してimageviewに表示
             imageview.image = result;
-            
         }];
-        
-        
-//        parse用のimageData取得
-        [manager requestImageDataForAsset:obj
-                                  options:nil
-                            resultHandler:^(NSData * _Nullable imageData,
-                                            NSString * _Nullable dataUTI,
-                                            UIImageOrientation orientation,
-                                            NSDictionary * _Nullable info) {
-                                
-                                self.imgData = imageData;
-                                NSLog(@"requestImageDataForAsset = parse用のデータ");
-                                [self makeImageData];
-                            }];
-        
     }];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -234,34 +197,6 @@
 - (void)qb_imagePickerControllerDidCancel:(QBImagePickerController *)imagePickerController{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
-
-//imgArrayのimgDataをそれぞれのNSDataに振り分ける
-//requestImageDataForAsset毎に呼ばれる（1~4回）
-- (void)makeImageData{
-    [self.imgArray addObject:self.imgData];
-    NSLog(@"makeImageData　なんこ？　%ld", self.imgArray.count);
-//    for文が使えたらいいなーと思っておるのですが
-        if ([self.imgArray count] == 1) {
-            self.imgData1 = [self.imgArray objectAtIndex:0];
-            NSLog(@"imgArray 1番目取り出し成功");
-        }
-        else if ([self.imgArray count] == 2) {
-            self.imgData2 = [self.imgArray objectAtIndex:1];
-            NSLog(@"imgArray 2番目取り出し成功");
-        }
-        else if ([self.imgArray count] == 3) {
-            self.imgData3 = [self.imgArray objectAtIndex:2];
-            NSLog(@"imgArray 3番目取り出し成功");
-        }
-        else if ([self.imgArray count] == 4) {
-            self.imgData4 = [self.imgArray objectAtIndex:3];
-            NSLog(@"imgArray 4番目取り出し成功");
-        }
-};
-
-
 
 #pragma mark -
 
@@ -287,57 +222,40 @@
     return _imagePickerController;
 }
 
-
-
-
 //ジコマンボタンのアクション（Post機能）
 //
 - (IBAction)sendButtonTap:(id)sender {
     NSLog(@"ジコマン押した");
     PFObject *ichizen = [PFObject objectWithClassName:@"Ichizen"];
     ichizen[@"text"] = self.submitTextView.text;
-    NSLog(@"text　Parseに投げれたぜ！");
     
-//    もっといい方法はないんでしょうか？（for文？）
-//    imgData1~4までがあったらそれぞれPFFileに変換して、@"Img1~4"のカラムに入れる
-    if (self.imgData1) {
-        PFFile *imageFile1 = [PFFile fileWithName:@"img1" data:self.imgData1];
-        ichizen[@"Img1"] = imageFile1;
-        NSLog(@"Img1 Paraseに投げれたぜ！");
-        
-        if (self.imgData2) {
-            PFFile *imageFile2 = [PFFile fileWithName:@"img2" data:self.imgData2];
-            ichizen[@"Img2"] = imageFile2;
-            NSLog(@"Img2 Paraseに投げれたぜ！");
-            
-            if (self.imgData3) {
-                PFFile *imageFile3 = [PFFile fileWithName:@"img3" data:self.imgData3];
-                ichizen[@"Img3"] = imageFile3;
-                NSLog(@"Img3 Paraseに投げれたぜ！");
-                
-                 if (self.imgData4) {
-                    PFFile *imageFile4 = [PFFile fileWithName:@"img4" data:self.imgData4];
-                    ichizen[@"Img4"] = imageFile4;
-                    NSLog(@"Img4 Paraseに投げれたぜ！");
-                }
-        }
-    }
-}
-    
-//    バックグラウンドでsave処理（saveInBackgroundWithBlock）
-     [ichizen saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if (!succeeded) {
-            NSLog(@"投稿失敗。 %@", error);
-        } else {
-            NSLog(@"投稿成功");
-            // まえの画面(Post一覧)に遷移
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
+    PHImageManager *manager = [PHImageManager defaultManager];
+    [self.imagePickerController.selectedAssets enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        // parse用のimageData取得
+        [manager requestImageDataForAsset:obj
+                                  options:nil
+                            resultHandler:^(NSData * _Nullable imageData,
+                                            NSString * _Nullable dataUTI,
+                                            UIImageOrientation orientation,
+                                            NSDictionary * _Nullable info) {
+                                PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"img%ld", idx + 1] data:imageData];
+                                ichizen[[NSString stringWithFormat:@"Img%ld", idx + 1]] = imageFile;
+                                if (idx + 1 == self.imagePickerController.selectedAssets.count) {
+                                    NSLog(@"最後？");
+                                    NSLog(@"text　Parseに投げれたぜ！");
+                                    [ichizen saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                                        if (!succeeded) {
+                                            NSLog(@"投稿失敗。 %@", error);
+                                        } else {
+                                            NSLog(@"投稿成功");
+                                            [self dismissViewControllerAnimated:YES completion:nil];
+                                        }
+                                    }];
+                                }
+                            }];
     }];
 }
-
-
-
+    
 /*
 #pragma mark - Navigation
 
