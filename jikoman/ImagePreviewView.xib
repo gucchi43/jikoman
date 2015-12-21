@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImagePreviewView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="D1I-0g-b5H">
+            <rect key="frame" x="0.0" y="0.0" width="670" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-TF-7ck">
+                    <rect key="frame" x="510" y="0.0" width="160" height="160"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uhs-pF-Amv">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        </imageView>
+                        <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpK-9o-XLB">
+                            <rect key="frame" x="110" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="9P8-0n-Haj"/>
+                                <constraint firstAttribute="width" constant="50" id="ACZ-jC-gfr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <state key="normal" title="×"/>
+                            <connections>
+                                <action selector="deleteImageAction:" destination="-1" eventType="touchUpInside" id="VHt-sz-Jf0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Jee-TF-7ck" secondAttribute="height" multiplier="1:1" id="0oM-P0-Zr4"/>
+                        <constraint firstAttribute="bottom" secondItem="uhs-pF-Amv" secondAttribute="bottom" id="JNK-TR-qQZ"/>
+                        <constraint firstAttribute="trailing" secondItem="NpK-9o-XLB" secondAttribute="trailing" id="O26-ok-9CQ"/>
+                        <constraint firstItem="NpK-9o-XLB" firstAttribute="top" secondItem="Jee-TF-7ck" secondAttribute="top" id="ier-t3-OcI"/>
+                        <constraint firstAttribute="trailing" secondItem="uhs-pF-Amv" secondAttribute="trailing" id="qgA-oB-Zyr"/>
+                        <constraint firstItem="uhs-pF-Amv" firstAttribute="leading" secondItem="Jee-TF-7ck" secondAttribute="leading" id="sX4-cP-9oM"/>
+                        <constraint firstItem="uhs-pF-Amv" firstAttribute="top" secondItem="Jee-TF-7ck" secondAttribute="top" id="wuN-Ly-8U1"/>
+                    </constraints>
+                </view>
+                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzL-Ki-Is6">
+                    <rect key="frame" x="340" y="0.0" width="160" height="160"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gMX-hb-9w2">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        </imageView>
+                        <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMt-iT-rBh">
+                            <rect key="frame" x="110" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="3ph-hw-jvc"/>
+                                <constraint firstAttribute="height" constant="50" id="icy-hF-pv7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <state key="normal" title="×"/>
+                            <connections>
+                                <action selector="deleteImageAction:" destination="-1" eventType="touchUpInside" id="AGE-cQ-5VB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mzL-Ki-Is6" secondAttribute="height" multiplier="1:1" id="GFi-G2-BN2"/>
+                        <constraint firstAttribute="bottom" secondItem="gMX-hb-9w2" secondAttribute="bottom" id="IB5-mf-cDF"/>
+                        <constraint firstItem="gMX-hb-9w2" firstAttribute="leading" secondItem="mzL-Ki-Is6" secondAttribute="leading" id="XNc-3M-o1F"/>
+                        <constraint firstItem="gMX-hb-9w2" firstAttribute="top" secondItem="mzL-Ki-Is6" secondAttribute="top" id="i1g-98-OHI"/>
+                        <constraint firstItem="PMt-iT-rBh" firstAttribute="top" secondItem="mzL-Ki-Is6" secondAttribute="top" id="l3b-bF-ScQ"/>
+                        <constraint firstAttribute="trailing" secondItem="gMX-hb-9w2" secondAttribute="trailing" id="mmb-ME-uE4"/>
+                        <constraint firstAttribute="trailing" secondItem="PMt-iT-rBh" secondAttribute="trailing" id="zly-Qa-v0y"/>
+                    </constraints>
+                </view>
+                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amt-mC-Sp6">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="keP-ab-nSz">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        </imageView>
+                        <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50f-qD-CRj">
+                            <rect key="frame" x="110" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="3O0-f7-iY5"/>
+                                <constraint firstAttribute="width" constant="50" id="lxb-bP-UGs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <state key="normal" title="×"/>
+                            <connections>
+                                <action selector="deleteImageAction:" destination="-1" eventType="touchUpInside" id="iyx-dl-sHI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="keP-ab-nSz" firstAttribute="leading" secondItem="amt-mC-Sp6" secondAttribute="leading" id="ArP-dr-VfO"/>
+                        <constraint firstAttribute="trailing" secondItem="50f-qD-CRj" secondAttribute="trailing" id="UZy-KO-fIQ"/>
+                        <constraint firstAttribute="bottom" secondItem="keP-ab-nSz" secondAttribute="bottom" id="fd5-iS-sT2"/>
+                        <constraint firstAttribute="width" secondItem="amt-mC-Sp6" secondAttribute="height" multiplier="1:1" id="hgv-G0-D5v"/>
+                        <constraint firstItem="50f-qD-CRj" firstAttribute="top" secondItem="amt-mC-Sp6" secondAttribute="top" id="lI7-17-feY"/>
+                        <constraint firstItem="keP-ab-nSz" firstAttribute="top" secondItem="amt-mC-Sp6" secondAttribute="top" id="loI-Im-HT5"/>
+                        <constraint firstAttribute="trailing" secondItem="keP-ab-nSz" secondAttribute="trailing" id="n4l-ar-ZFR"/>
+                    </constraints>
+                </view>
+                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-35-tGX">
+                    <rect key="frame" x="170" y="0.0" width="160" height="160"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3hk-cZ-eVJ">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        </imageView>
+                        <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-no-bnI">
+                            <rect key="frame" x="110" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="0JJ-G0-Y92"/>
+                                <constraint firstAttribute="width" constant="50" id="azo-fh-ANg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <state key="normal" title="×"/>
+                            <connections>
+                                <action selector="deleteImageAction:" destination="-1" eventType="touchUpInside" id="6Td-qr-pjd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="g0d-no-bnI" firstAttribute="top" secondItem="JNA-35-tGX" secondAttribute="top" id="GiT-D8-cgh"/>
+                        <constraint firstItem="3hk-cZ-eVJ" firstAttribute="top" secondItem="JNA-35-tGX" secondAttribute="top" id="Qeb-3Z-EDG"/>
+                        <constraint firstAttribute="trailing" secondItem="g0d-no-bnI" secondAttribute="trailing" id="SdL-ls-k28"/>
+                        <constraint firstAttribute="width" secondItem="JNA-35-tGX" secondAttribute="height" multiplier="1:1" id="Wtg-dM-xkD"/>
+                        <constraint firstAttribute="trailing" secondItem="3hk-cZ-eVJ" secondAttribute="trailing" id="aV3-8y-iBe"/>
+                        <constraint firstItem="3hk-cZ-eVJ" firstAttribute="leading" secondItem="JNA-35-tGX" secondAttribute="leading" id="pTQ-Kq-E8x"/>
+                        <constraint firstAttribute="bottom" secondItem="3hk-cZ-eVJ" secondAttribute="bottom" id="sTU-Z4-n5M"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jee-TF-7ck" secondAttribute="trailing" id="0Ea-i0-n8U"/>
+                <constraint firstItem="amt-mC-Sp6" firstAttribute="leading" secondItem="D1I-0g-b5H" secondAttribute="leading" id="7Fm-5T-UMn"/>
+                <constraint firstItem="Jee-TF-7ck" firstAttribute="leading" secondItem="mzL-Ki-Is6" secondAttribute="trailing" constant="10" id="8es-9g-WYG"/>
+                <constraint firstItem="amt-mC-Sp6" firstAttribute="top" secondItem="D1I-0g-b5H" secondAttribute="top" id="9PH-do-s58"/>
+                <constraint firstItem="JNA-35-tGX" firstAttribute="top" secondItem="D1I-0g-b5H" secondAttribute="top" id="HKb-9T-hbE"/>
+                <constraint firstAttribute="bottom" secondItem="JNA-35-tGX" secondAttribute="bottom" id="QFm-ev-XBP"/>
+                <constraint firstAttribute="bottom" secondItem="mzL-Ki-Is6" secondAttribute="bottom" id="Qmg-y6-Irl"/>
+                <constraint firstItem="Jee-TF-7ck" firstAttribute="top" secondItem="D1I-0g-b5H" secondAttribute="top" id="XuX-8G-ZlR"/>
+                <constraint firstAttribute="bottom" secondItem="amt-mC-Sp6" secondAttribute="bottom" id="euQ-aF-VCu"/>
+                <constraint firstItem="JNA-35-tGX" firstAttribute="leading" secondItem="amt-mC-Sp6" secondAttribute="trailing" constant="10" id="mSO-Um-248"/>
+                <constraint firstItem="mzL-Ki-Is6" firstAttribute="leading" secondItem="JNA-35-tGX" secondAttribute="trailing" constant="10" id="sUQ-v7-FtH"/>
+                <constraint firstItem="mzL-Ki-Is6" firstAttribute="top" secondItem="D1I-0g-b5H" secondAttribute="top" id="tSO-nH-jRu"/>
+                <constraint firstAttribute="bottom" secondItem="Jee-TF-7ck" secondAttribute="bottom" id="tWN-2j-wDe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="142" y="175"/>
+        </view>
+    </objects>
+</document>
