@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OtherGoodTableViewController : UITableViewController
-<UITableViewDelegate, UITableViewDataSource>
+
+
+@interface OtherGoodTableViewController : UITableViewController 
 
 @end
