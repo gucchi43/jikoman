@@ -4,3 +4,7 @@ pod "QBImagePickerController"
 
 pod 'MBCalendarKit', '~>3.0.4'
 
+use_frameworks!
+
+pod 'CVCalendar', '~> 1.2.8'
+

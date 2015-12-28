@@ -164,29 +164,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-nV-yOf">
-                                            <rect key="frame" x="29" y="11" width="50" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-nV-yOf" userLabel="name">
+                                            <rect key="frame" x="5" y="5" width="42.5" height="33.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xvf-cM-6rT">
-                                            <rect key="frame" x="354.5" y="0.0" width="43.5" height="43.5"/>
+                                            <rect key="frame" x="364" y="5" width="33.5" height="33.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Xvf-cM-6rT" secondAttribute="height" multiplier="1:1" id="gyl-Yi-HxO"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-7w-QD9">
-                                            <rect key="frame" x="176" y="11" width="52" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-7w-QD9" userLabel="text">
+                                            <rect key="frame" x="52" y="13" width="306.5" height="17.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ohC-nV-yOf" secondAttribute="bottom" constant="5" id="0SI-VW-iuY"/>
+                                        <constraint firstItem="ohC-nV-yOf" firstAttribute="leading" secondItem="AZj-jc-mgn" secondAttribute="leading" constant="5" id="21B-Cd-bz3"/>
                                         <constraint firstAttribute="trailing" secondItem="Xvf-cM-6rT" secondAttribute="trailing" constant="16" id="8Oh-aC-caN"/>
-                                        <constraint firstItem="Xvf-cM-6rT" firstAttribute="top" secondItem="AZj-jc-mgn" secondAttribute="top" id="BvS-Z0-kXy"/>
-                                        <constraint firstAttribute="bottom" secondItem="Xvf-cM-6rT" secondAttribute="bottom" id="sgi-q2-zxT"/>
+                                        <constraint firstItem="ohC-nV-yOf" firstAttribute="top" secondItem="AZj-jc-mgn" secondAttribute="top" constant="5" id="BsA-gt-MU4"/>
+                                        <constraint firstItem="Xvf-cM-6rT" firstAttribute="top" secondItem="AZj-jc-mgn" secondAttribute="top" constant="5" id="BvS-Z0-kXy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dkg-7w-QD9" secondAttribute="bottom" constant="5" id="Giv-PF-TRo"/>
+                                        <constraint firstItem="dkg-7w-QD9" firstAttribute="top" secondItem="AZj-jc-mgn" secondAttribute="topMargin" constant="5" id="O97-Nx-vmR"/>
+                                        <constraint firstItem="dkg-7w-QD9" firstAttribute="leading" secondItem="ohC-nV-yOf" secondAttribute="trailing" constant="5" id="f0H-dd-b28"/>
+                                        <constraint firstItem="Xvf-cM-6rT" firstAttribute="leading" secondItem="dkg-7w-QD9" secondAttribute="trailing" constant="5" id="p6P-z5-UCQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xvf-cM-6rT" secondAttribute="bottom" constant="5" id="sgi-q2-zxT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

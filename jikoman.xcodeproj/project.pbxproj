@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		421EC3D44E364A9C807CAB91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63174F90091D2A038F2CB1B5 /* libPods.a */; };
+		15A1040F2550B9532A13E2BA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DD4780A1669F046D64855 /* Pods.framework */; };
 		ED0A5D6D1C15A9EE00D3033D /* ImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0A5D6B1C15A9EE00D3033D /* ImagePreviewView.m */; };
 		ED0A5D6E1C15A9EE00D3033D /* ImagePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0A5D6C1C15A9EE00D3033D /* ImagePreviewView.xib */; };
 		ED72AFFF1BFF287800B84202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72AFFE1BFF287800B84202 /* main.m */; };
@@ -43,9 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63174F90091D2A038F2CB1B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AABFC595E93420AA729DE2D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		86F16177022AF308120FD3E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DE4DD4780A1669F046D64855 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0A5D6A1C15A9EE00D3033D /* ImagePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePreviewView.h; sourceTree = "<group>"; };
 		ED0A5D6B1C15A9EE00D3033D /* ImagePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePreviewView.m; sourceTree = "<group>"; };
 		ED0A5D6C1C15A9EE00D3033D /* ImagePreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePreviewView.xib; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421EC3D44E364A9C807CAB91 /* libPods.a in Frameworks */,
+				15A1040F2550B9532A13E2BA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +115,7 @@
 		4EFF1C76082EAA6657BFF643 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63174F90091D2A038F2CB1B5 /* libPods.a */,
+				DE4DD4780A1669F046D64855 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
