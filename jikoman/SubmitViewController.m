@@ -11,7 +11,8 @@
 #import <Parse/Parse.h>
 
 #import "ImagePreviewView.h"
-#import <QBImagePickerController.h>
+
+#import <QBImagePickerController/QBImagePickerController.h>
 
 
 @interface SubmitViewController () <QBImagePickerControllerDelegate,ImagePreviewViewDelegate>

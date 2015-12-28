@@ -8,9 +8,11 @@
 
 #import "MyGoodViewController.h"
 
-#import <NSCalendarCategories.h>
+#import <MBCalendarKit/NSCalendarCategories.h>
 
-#import <NSDate+Components.h>
+#import <MBCalendarKit/NSDate+Components.h>
+
+#import <MBCalendarKit/CalendarKit.h>
 
 @interface MyGoodViewController ()<CKCalendarViewDelegate, CKCalendarViewDataSource>
 

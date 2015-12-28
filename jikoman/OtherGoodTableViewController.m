@@ -8,7 +8,7 @@
 
 #import "OtherGoodTableViewController.h"
 
-#import <Parse.h>
+#import <Parse/Parse.h>
 
 @interface OtherGoodTableViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *otherTableView;
