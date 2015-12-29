@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VbN-mF-Upv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="viG-SG-hp1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -404,7 +404,171 @@
             </objects>
             <point key="canvasLocation" x="1204" y="2145"/>
         </scene>
+        <!--Calendar Appearance Delegate-->
+        <scene sceneID="p4l-hj-kbC">
+            <objects>
+                <viewController id="viG-SG-hp1" customClass="MygoodViewController" customModule="jikoman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oCC-4u-SiU"/>
+                        <viewControllerLayoutGuide type="bottom" id="VZ8-Rc-Dqe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JoD-hN-hYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzT-aG-imj">
+                                <rect key="frame" x="119" y="28" width="136" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJH-1B-yLq" customClass="CVCalendarMenuView" customModule="jikoman" customModuleProvider="target">
+                                <rect key="frame" x="16" y="71" width="343" height="24"/>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="viG-SG-hp1" id="U0C-2l-F4S"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMZ-tM-qt3">
+                                <rect key="frame" x="326" y="23" width="33" height="33"/>
+                                <state key="normal" image="present-100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="todayMonthView" destination="viG-SG-hp1" eventType="touchUpInside" id="4oy-NA-2uv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable showing days out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8z-PD-UxC">
+                                <rect key="frame" x="16" y="623" width="224" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-eo-rpz">
+                                <rect key="frame" x="310" y="616" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="viG-SG-hp1" eventType="valueChanged" id="ysT-VW-6ms"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fu-Ob-FYa" customClass="CVCalendarView" customModule="jikoman" customModuleProvider="target">
+                                <rect key="frame" x="16" y="103" width="343" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="WLE-uT-tuC">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="480"/>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <outlet property="calendarAppearanceDelegate" destination="viG-SG-hp1" id="n3s-Ub-WcD"/>
+                                    <outlet property="calendarDelegate" destination="viG-SG-hp1" id="4Fo-rN-q5i"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autolayout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-30-dTs">
+                                <rect key="frame" x="147" y="411" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEj-Om-xLE">
+                                <rect key="frame" x="16" y="25" width="39" height="30"/>
+                                <state key="normal" title="Week">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toWeekView:" destination="viG-SG-hp1" eventType="touchUpInside" id="VFe-gI-ow9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mto-k9-lU0">
+                                <rect key="frame" x="63" y="25" width="44" height="30"/>
+                                <state key="normal" title="Month">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toMonthView:" destination="viG-SG-hp1" eventType="touchUpInside" id="GVM-G6-g6c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1Z-08-jWv">
+                                <rect key="frame" x="199" y="440" width="30" height="30"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadNext:" destination="viG-SG-hp1" eventType="touchUpInside" id="0Af-aa-49a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7e-7g-HAD">
+                                <rect key="frame" x="147" y="440" width="30" height="30"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPrevious:" destination="viG-SG-hp1" eventType="touchUpInside" id="7nl-bX-Wxm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyl-uw-A1Y">
+                                <rect key="frame" x="258" y="553" width="101" height="30"/>
+                                <state key="normal" title="Refresh Month"/>
+                                <connections>
+                                    <action selector="refreshMonth:" destination="viG-SG-hp1" eventType="touchUpInside" id="oDU-Zx-g0C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejg-wG-CGI">
+                                <rect key="frame" x="16" y="553" width="164" height="30"/>
+                                <state key="normal" title="Remove Circle and Dots"/>
+                                <connections>
+                                    <action selector="removeCircleAndDot:" destination="viG-SG-hp1" eventType="touchUpInside" id="gFK-v5-7gb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="h8z-PD-UxC" secondAttribute="bottom" constant="20" symbolic="YES" id="1mA-qC-nMJ"/>
+                            <constraint firstItem="h1Z-08-jWv" firstAttribute="top" secondItem="bfV-30-dTs" secondAttribute="bottom" constant="8" id="4ch-4o-oS7"/>
+                            <constraint firstItem="2fu-Ob-FYa" firstAttribute="trailing" secondItem="sJH-1B-yLq" secondAttribute="trailing" id="6PI-MH-EZ6"/>
+                            <constraint firstItem="VZ8-Rc-Dqe" firstAttribute="top" secondItem="Ejg-wG-CGI" secondAttribute="bottom" constant="84" id="6Sv-we-w84"/>
+                            <constraint firstItem="h1Z-08-jWv" firstAttribute="top" secondItem="2fu-Ob-FYa" secondAttribute="bottom" constant="37" id="6ma-sL-3NN"/>
+                            <constraint firstItem="M7e-7g-HAD" firstAttribute="top" secondItem="bfV-30-dTs" secondAttribute="bottom" constant="8" id="8NY-my-ouA"/>
+                            <constraint firstItem="HEj-Om-xLE" firstAttribute="leading" secondItem="JoD-hN-hYO" secondAttribute="leadingMargin" id="D0j-fQ-ZYD"/>
+                            <constraint firstItem="mto-k9-lU0" firstAttribute="leading" secondItem="HEj-Om-xLE" secondAttribute="trailing" constant="8" id="DcH-0b-rZM"/>
+                            <constraint firstAttribute="centerX" secondItem="bfV-30-dTs" secondAttribute="centerX" constant="-0.5" id="Fso-2O-Pff"/>
+                            <constraint firstItem="mto-k9-lU0" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="5" id="HSJ-yB-bC9"/>
+                            <constraint firstItem="2fu-Ob-FYa" firstAttribute="leading" secondItem="JoD-hN-hYO" secondAttribute="leadingMargin" id="Jck-W1-3y0"/>
+                            <constraint firstItem="JKF-eo-rpz" firstAttribute="trailing" secondItem="2fu-Ob-FYa" secondAttribute="trailing" id="LMB-Zl-eEv"/>
+                            <constraint firstItem="sJH-1B-yLq" firstAttribute="top" secondItem="YMZ-tM-qt3" secondAttribute="bottom" constant="15" id="Lm5-cu-4sr"/>
+                            <constraint firstItem="ZzT-aG-imj" firstAttribute="centerX" secondItem="sJH-1B-yLq" secondAttribute="centerX" id="N1T-5A-0Lu"/>
+                            <constraint firstItem="JKF-eo-rpz" firstAttribute="bottom" secondItem="h8z-PD-UxC" secondAttribute="bottom" id="Odi-Bn-IVy"/>
+                            <constraint firstItem="h8z-PD-UxC" firstAttribute="leading" secondItem="2fu-Ob-FYa" secondAttribute="leading" id="QbK-eo-Btf"/>
+                            <constraint firstItem="M7e-7g-HAD" firstAttribute="leading" secondItem="bfV-30-dTs" secondAttribute="leading" id="Rmb-TF-oFM"/>
+                            <constraint firstItem="YMZ-tM-qt3" firstAttribute="trailing" secondItem="sJH-1B-yLq" secondAttribute="trailing" id="Uvg-a0-dyn"/>
+                            <constraint firstItem="ZzT-aG-imj" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="8" symbolic="YES" id="XWq-GA-zTR"/>
+                            <constraint firstItem="VZ8-Rc-Dqe" firstAttribute="top" secondItem="Gyl-uw-A1Y" secondAttribute="bottom" constant="84" id="c7N-ck-OlG"/>
+                            <constraint firstItem="YMZ-tM-qt3" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="3" id="f6e-nL-Njo"/>
+                            <constraint firstItem="M7e-7g-HAD" firstAttribute="top" secondItem="2fu-Ob-FYa" secondAttribute="bottom" constant="37" id="f7a-gt-H3J"/>
+                            <constraint firstItem="HEj-Om-xLE" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="5" id="iz8-17-VQ1"/>
+                            <constraint firstItem="Ejg-wG-CGI" firstAttribute="leading" secondItem="JoD-hN-hYO" secondAttribute="leadingMargin" id="lgd-NT-cnl"/>
+                            <constraint firstItem="2fu-Ob-FYa" firstAttribute="top" secondItem="JoD-hN-hYO" secondAttribute="top" constant="103" id="m90-Zy-iXs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gyl-uw-A1Y" secondAttribute="trailing" id="nkv-kQ-jmx"/>
+                            <constraint firstItem="bfV-30-dTs" firstAttribute="top" secondItem="2fu-Ob-FYa" secondAttribute="bottom" constant="8" id="oeX-on-keP"/>
+                            <constraint firstItem="2fu-Ob-FYa" firstAttribute="leading" secondItem="sJH-1B-yLq" secondAttribute="leading" id="qqK-vp-KmX"/>
+                            <constraint firstItem="2fu-Ob-FYa" firstAttribute="top" secondItem="sJH-1B-yLq" secondAttribute="bottom" constant="8" symbolic="YES" id="w8G-22-m10"/>
+                            <constraint firstItem="sJH-1B-yLq" firstAttribute="trailing" secondItem="JoD-hN-hYO" secondAttribute="trailingMargin" id="wU4-rJ-QVf"/>
+                            <constraint firstItem="h1Z-08-jWv" firstAttribute="trailing" secondItem="bfV-30-dTs" secondAttribute="trailing" id="xD5-cM-MFG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="calendarView" destination="2fu-Ob-FYa" id="uea-9P-dPB"/>
+                        <outlet property="daysOutSwitch" destination="JKF-eo-rpz" id="scb-uC-iXh"/>
+                        <outlet property="menuView" destination="sJH-1B-yLq" id="7ut-EA-gig"/>
+                        <outlet property="monthLabel" destination="ZzT-aG-imj" id="RfW-yN-HUj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnu-Vq-pDf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2785.5" y="2179.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="present-100" width="33" height="33"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zUW-HN-rRj"/>
     </inferredMetricsTieBreakers>

@@ -23,6 +23,7 @@
 		ED72B0381BFF457D00B84202 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B0371BFF457D00B84202 /* MyAccountViewController.m */; };
 		ED72B03B1BFF45C800B84202 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B03A1BFF45C800B84202 /* SettingsTableViewController.m */; };
 		ED72B03E1BFF494500B84202 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B03D1BFF494500B84202 /* SubmitViewController.m */; };
+		EDDF1DEB1C31330200BAF1CF /* MygoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDF1DEA1C31330200BAF1CF /* MygoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		ED72B03A1BFF45C800B84202 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		ED72B03C1BFF494500B84202 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		ED72B03D1BFF494500B84202 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
+		EDDF1DE91C31330100BAF1CF /* jikoman-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jikoman-Bridging-Header.h"; sourceTree = "<group>"; };
+		EDDF1DEA1C31330200BAF1CF /* MygoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MygoodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,11 +148,12 @@
 		ED72AFFC1BFF287800B84202 /* jikoman */ = {
 			isa = PBXGroup;
 			children = (
+				ED72B0061BFF287800B84202 /* Main.storyboard */,
 				ED72B0001BFF287800B84202 /* AppDelegate.h */,
 				ED72B0011BFF287800B84202 /* AppDelegate.m */,
 				ED72B0031BFF287800B84202 /* ViewController.h */,
 				ED72B0041BFF287800B84202 /* ViewController.m */,
-				ED72B0061BFF287800B84202 /* Main.storyboard */,
+				EDDF1DEA1C31330200BAF1CF /* MygoodViewController.swift */,
 				ED72B0301BFF449E00B84202 /* MyGoodViewController.h */,
 				ED72B0311BFF449E00B84202 /* MyGoodViewController.m */,
 				ED72B0331BFF453C00B84202 /* OtherGoodTableViewController.h */,
@@ -167,6 +171,7 @@
 				ED72B00B1BFF287800B84202 /* LaunchScreen.storyboard */,
 				ED72B00E1BFF287800B84202 /* Info.plist */,
 				ED72AFFD1BFF287800B84202 /* Supporting Files */,
+				EDDF1DE91C31330100BAF1CF /* jikoman-Bridging-Header.h */,
 			);
 			path = jikoman;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 		ED72AFF21BFF287800B84202 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "HIroki Taniguti";
 				TargetAttributes = {
@@ -384,6 +390,7 @@
 				ED0A5D6D1C15A9EE00D3033D /* ImagePreviewView.m in Sources */,
 				ED72B0021BFF287800B84202 /* AppDelegate.m in Sources */,
 				ED72B0381BFF457D00B84202 /* MyAccountViewController.m in Sources */,
+				EDDF1DEB1C31330200BAF1CF /* MygoodViewController.swift in Sources */,
 				ED72B03E1BFF494500B84202 /* SubmitViewController.m in Sources */,
 				ED72AFFF1BFF287800B84202 /* main.m in Sources */,
 				ED72B0321BFF449E00B84202 /* MyGoodViewController.m in Sources */,
@@ -527,10 +534,13 @@
 			baseConfigurationReference = 86F16177022AF308120FD3E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = jikoman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikoman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "jikoman/jikoman-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -539,10 +549,12 @@
 			baseConfigurationReference = 7AABFC595E93420AA729DE2D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = jikoman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.jikoman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "jikoman/jikoman-Bridging-Header.h";
 			};
 			name = Release;
 		};
