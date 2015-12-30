@@ -183,6 +183,7 @@ extension MygoodViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
     }
     
     func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
+//        カレンダーレイアウトコード実装部分
         let π = M_PI
         
         let ringSpacing: CGFloat = 3.0
@@ -190,7 +191,7 @@ extension MygoodViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
         let ringVerticalOffset: CGFloat = 1.0
         var ringLayer: CAShapeLayer!
         let ringLineWidth: CGFloat = 4.0
-        let ringLineColour: UIColor = .blueColor()
+        let ringLineColour: UIColor = .redColor()
         
         let newView = UIView(frame: dayView.bounds)
         
@@ -256,6 +257,7 @@ extension MygoodViewController {
     
     @IBAction func todayMonthView() {
         calendarView.toggleCurrentDayView()
+        
     }
     
     /// Switch to WeekView mode.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="viG-SG-hp1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VbN-mF-Upv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -33,11 +33,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSZ-go-5WL" userLabel="myColendarView">
-                                <rect key="frame" x="0.0" y="114" width="414" height="573"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSZ-go-5WL" userLabel="myColendarView">
+                                <rect key="frame" x="0.0" y="114" width="600" height="573"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="br2-lb-5ac">
@@ -57,11 +57,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ワタシノイチゼン" id="Fdt-ra-UOS">
-                        <barButtonItem key="rightBarButtonItem" title="善" id="1Qt-VO-RdQ">
-                            <connections>
-                                <segue destination="8lw-iD-jaT" kind="presentation" id="9PP-lw-llT"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="善" id="1Qt-VO-RdQ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="MyColendarView" destination="hSZ-go-5WL" id="n2S-Cx-szt"/>
@@ -70,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090" y="531"/>
+            <point key="canvasLocation" x="3168" y="877"/>
         </scene>
         <!--MyAccountViewController-->
         <scene sceneID="ej7-59-XwD">
@@ -95,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDd-8I-aEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="1385"/>
+            <point key="canvasLocation" x="1767" y="1188"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3Tw-ib-OAg">
@@ -359,7 +355,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gU4-ZV-lSV"/>
+                        <segue destination="viG-SG-hp1" kind="relationship" relationship="rootViewController" id="IGQ-0Y-nhh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRG-CH-Vnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -417,19 +413,19 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzT-aG-imj">
-                                <rect key="frame" x="119" y="28" width="136" height="24"/>
+                                <rect key="frame" x="119" y="72" width="136" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJH-1B-yLq" customClass="CVCalendarMenuView" customModule="jikoman" customModuleProvider="target">
-                                <rect key="frame" x="16" y="71" width="343" height="24"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJH-1B-yLq" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="16" y="95" width="343" height="0.0"/>
                                 <connections>
                                     <outlet property="menuViewDelegate" destination="viG-SG-hp1" id="U0C-2l-F4S"/>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMZ-tM-qt3">
-                                <rect key="frame" x="326" y="23" width="33" height="33"/>
+                                <rect key="frame" x="326" y="67" width="33" height="25"/>
                                 <state key="normal" image="present-100">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -438,18 +434,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable showing days out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8z-PD-UxC">
-                                <rect key="frame" x="16" y="623" width="224" height="24"/>
+                                <rect key="frame" x="16" y="593" width="224" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-eo-rpz">
-                                <rect key="frame" x="310" y="616" width="51" height="31"/>
+                                <rect key="frame" x="310" y="586" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchChanged:" destination="viG-SG-hp1" eventType="valueChanged" id="ysT-VW-6ms"/>
                                 </connections>
                             </switch>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fu-Ob-FYa" customClass="CVCalendarView" customModule="jikoman" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fu-Ob-FYa" customClass="CVCalendarView" customModule="CVCalendar">
                                 <rect key="frame" x="16" y="103" width="343" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="WLE-uT-tuC">
@@ -468,7 +464,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEj-Om-xLE">
-                                <rect key="frame" x="16" y="25" width="39" height="30"/>
+                                <rect key="frame" x="16" y="69" width="39" height="30"/>
                                 <state key="normal" title="Week">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -477,7 +473,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mto-k9-lU0">
-                                <rect key="frame" x="63" y="25" width="44" height="30"/>
+                                <rect key="frame" x="63" y="69" width="44" height="30"/>
                                 <state key="normal" title="Month">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -504,14 +500,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyl-uw-A1Y">
-                                <rect key="frame" x="258" y="553" width="101" height="30"/>
+                                <rect key="frame" x="258" y="504" width="101" height="30"/>
                                 <state key="normal" title="Refresh Month"/>
                                 <connections>
                                     <action selector="refreshMonth:" destination="viG-SG-hp1" eventType="touchUpInside" id="oDU-Zx-g0C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejg-wG-CGI">
-                                <rect key="frame" x="16" y="553" width="164" height="30"/>
+                                <rect key="frame" x="16" y="504" width="164" height="30"/>
                                 <state key="normal" title="Remove Circle and Dots"/>
                                 <connections>
                                     <action selector="removeCircleAndDot:" destination="viG-SG-hp1" eventType="touchUpInside" id="gFK-v5-7gb"/>
@@ -520,7 +516,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="h8z-PD-UxC" secondAttribute="bottom" constant="20" symbolic="YES" id="1mA-qC-nMJ"/>
+                            <constraint firstAttribute="bottom" secondItem="h8z-PD-UxC" secondAttribute="bottom" constant="50" id="1mA-qC-nMJ"/>
                             <constraint firstItem="h1Z-08-jWv" firstAttribute="top" secondItem="bfV-30-dTs" secondAttribute="bottom" constant="8" id="4ch-4o-oS7"/>
                             <constraint firstItem="2fu-Ob-FYa" firstAttribute="trailing" secondItem="sJH-1B-yLq" secondAttribute="trailing" id="6PI-MH-EZ6"/>
                             <constraint firstItem="VZ8-Rc-Dqe" firstAttribute="top" secondItem="Ejg-wG-CGI" secondAttribute="bottom" constant="84" id="6Sv-we-w84"/>
@@ -532,7 +528,7 @@
                             <constraint firstItem="mto-k9-lU0" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="5" id="HSJ-yB-bC9"/>
                             <constraint firstItem="2fu-Ob-FYa" firstAttribute="leading" secondItem="JoD-hN-hYO" secondAttribute="leadingMargin" id="Jck-W1-3y0"/>
                             <constraint firstItem="JKF-eo-rpz" firstAttribute="trailing" secondItem="2fu-Ob-FYa" secondAttribute="trailing" id="LMB-Zl-eEv"/>
-                            <constraint firstItem="sJH-1B-yLq" firstAttribute="top" secondItem="YMZ-tM-qt3" secondAttribute="bottom" constant="15" id="Lm5-cu-4sr"/>
+                            <constraint firstItem="sJH-1B-yLq" firstAttribute="top" secondItem="YMZ-tM-qt3" secondAttribute="bottom" constant="3" id="Lm5-cu-4sr"/>
                             <constraint firstItem="ZzT-aG-imj" firstAttribute="centerX" secondItem="sJH-1B-yLq" secondAttribute="centerX" id="N1T-5A-0Lu"/>
                             <constraint firstItem="JKF-eo-rpz" firstAttribute="bottom" secondItem="h8z-PD-UxC" secondAttribute="bottom" id="Odi-Bn-IVy"/>
                             <constraint firstItem="h8z-PD-UxC" firstAttribute="leading" secondItem="2fu-Ob-FYa" secondAttribute="leading" id="QbK-eo-Btf"/>
@@ -542,17 +538,24 @@
                             <constraint firstItem="VZ8-Rc-Dqe" firstAttribute="top" secondItem="Gyl-uw-A1Y" secondAttribute="bottom" constant="84" id="c7N-ck-OlG"/>
                             <constraint firstItem="YMZ-tM-qt3" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="3" id="f6e-nL-Njo"/>
                             <constraint firstItem="M7e-7g-HAD" firstAttribute="top" secondItem="2fu-Ob-FYa" secondAttribute="bottom" constant="37" id="f7a-gt-H3J"/>
-                            <constraint firstItem="HEj-Om-xLE" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="5" id="iz8-17-VQ1"/>
                             <constraint firstItem="Ejg-wG-CGI" firstAttribute="leading" secondItem="JoD-hN-hYO" secondAttribute="leadingMargin" id="lgd-NT-cnl"/>
                             <constraint firstItem="2fu-Ob-FYa" firstAttribute="top" secondItem="JoD-hN-hYO" secondAttribute="top" constant="103" id="m90-Zy-iXs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gyl-uw-A1Y" secondAttribute="trailing" id="nkv-kQ-jmx"/>
                             <constraint firstItem="bfV-30-dTs" firstAttribute="top" secondItem="2fu-Ob-FYa" secondAttribute="bottom" constant="8" id="oeX-on-keP"/>
                             <constraint firstItem="2fu-Ob-FYa" firstAttribute="leading" secondItem="sJH-1B-yLq" secondAttribute="leading" id="qqK-vp-KmX"/>
+                            <constraint firstItem="HEj-Om-xLE" firstAttribute="top" secondItem="oCC-4u-SiU" secondAttribute="bottom" constant="5" id="u84-2n-aZP"/>
                             <constraint firstItem="2fu-Ob-FYa" firstAttribute="top" secondItem="sJH-1B-yLq" secondAttribute="bottom" constant="8" symbolic="YES" id="w8G-22-m10"/>
                             <constraint firstItem="sJH-1B-yLq" firstAttribute="trailing" secondItem="JoD-hN-hYO" secondAttribute="trailingMargin" id="wU4-rJ-QVf"/>
                             <constraint firstItem="h1Z-08-jWv" firstAttribute="trailing" secondItem="bfV-30-dTs" secondAttribute="trailing" id="xD5-cM-MFG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ワタシノイチゼン" id="KZa-ho-sbl" userLabel="ワタシノイチゼン">
+                        <barButtonItem key="rightBarButtonItem" title="善" id="RC2-fB-zkd">
+                            <connections>
+                                <segue destination="8lw-iD-jaT" kind="presentation" id="7z8-j0-02x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="calendarView" destination="2fu-Ob-FYa" id="uea-9P-dPB"/>
@@ -563,13 +566,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnu-Vq-pDf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2785.5" y="2179.5"/>
+            <point key="canvasLocation" x="1996.5" y="331.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="present-100" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zUW-HN-rRj"/>
+        <segue reference="7z8-j0-02x"/>
     </inferredMetricsTieBreakers>
 </document>
