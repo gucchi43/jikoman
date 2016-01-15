@@ -182,6 +182,10 @@ extension MygoodViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
         return false
     }
     
+    
+
+// MARK: - サークルの実装
+    
     func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
 //        カレンダーレイアウトコード実装部分
         let π = M_PI
@@ -219,14 +223,15 @@ extension MygoodViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelega
         
         return newView
     }
-    
-    func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
-        if (Int(arc4random_uniform(3)) == 1) {
-            return true
-        }
-        
-        return false
-    }
+
+// MARK: - サークル実装のreturn
+//    func supplementaryView(shouldDisplayOnDayView dayView: DayView) -> Bool {
+//        if (Int(arc4random_uniform(3)) == 1) {
+//            return true
+//        }
+//        
+//        return false
+//    }
 }
 
 
