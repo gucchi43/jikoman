@@ -13,7 +13,6 @@
 @interface OtherGoodTableViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *otherTableView;
 @property (nonatomic) NSMutableArray *items;
-//@property (strong, nonatomic) NSArray *label2Array;
 
 @end
 
@@ -27,12 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    ひとまず８このデータの配列を置いとく
-    
-//    self.label2Array = @[@"2013/8/23/16:04",@"2013/8/23/16:15",@"2013/8/23/16:47",@"2013/8/23/17:10",
-//                    @"2013/8/23/1715:",@"2013/8/23/17:21",@"2013/8/23/17:33",@"2013/8/23/17:41"];
-    
-    
     [self.refreshControl addTarget:self action:@selector(updateCells) forControlEvents:UIControlEventValueChanged];
     [self loadItems];
 }
