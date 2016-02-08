@@ -10,6 +10,13 @@
 		16CEE3054538F4C459F6AFB6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02226B63421E0085CB86D210 /* Pods.framework */; };
 		ED0A5D6D1C15A9EE00D3033D /* ImagePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0A5D6B1C15A9EE00D3033D /* ImagePreviewView.m */; };
 		ED0A5D6E1C15A9EE00D3033D /* ImagePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0A5D6C1C15A9EE00D3033D /* ImagePreviewView.xib */; };
+		ED39C8211C678CDB00DB34BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39C81A1C678CDB00DB34BD /* AppDelegate.swift */; };
+		ED39C8221C678CDB00DB34BD /* ImagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39C81B1C678CDB00DB34BD /* ImagePreviewView.swift */; };
+		ED39C8231C678CDB00DB34BD /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39C81C1C678CDB00DB34BD /* MyAccountViewController.swift */; };
+		ED39C8241C678CDB00DB34BD /* OtherGoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39C81D1C678CDB00DB34BD /* OtherGoodTableViewController.swift */; };
+		ED39C8251C678CDB00DB34BD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39C81E1C678CDB00DB34BD /* SettingsTableViewController.swift */; };
+		ED39C8261C678CDB00DB34BD /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39C81F1C678CDB00DB34BD /* SubmitViewController.swift */; };
+		ED39C8271C678CDB00DB34BD /* ViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39C8201C678CDB00DB34BD /* ViewControlle.swift */; };
 		ED72AFFF1BFF287800B84202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72AFFE1BFF287800B84202 /* main.m */; };
 		ED72B0021BFF287800B84202 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B0011BFF287800B84202 /* AppDelegate.m */; };
 		ED72B0051BFF287800B84202 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED72B0041BFF287800B84202 /* ViewController.m */; };
@@ -50,6 +57,13 @@
 		ED0A5D6A1C15A9EE00D3033D /* ImagePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePreviewView.h; sourceTree = "<group>"; };
 		ED0A5D6B1C15A9EE00D3033D /* ImagePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePreviewView.m; sourceTree = "<group>"; };
 		ED0A5D6C1C15A9EE00D3033D /* ImagePreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePreviewView.xib; sourceTree = "<group>"; };
+		ED39C81A1C678CDB00DB34BD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED39C81B1C678CDB00DB34BD /* ImagePreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
+		ED39C81C1C678CDB00DB34BD /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		ED39C81D1C678CDB00DB34BD /* OtherGoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherGoodTableViewController.swift; sourceTree = "<group>"; };
+		ED39C81E1C678CDB00DB34BD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		ED39C81F1C678CDB00DB34BD /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
+		ED39C8201C678CDB00DB34BD /* ViewControlle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControlle.swift; sourceTree = "<group>"; };
 		ED72AFFA1BFF287800B84202 /* jikoman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jikoman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED72AFFE1BFF287800B84202 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED72B0001BFF287800B84202 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +165,12 @@
 				ED72B0061BFF287800B84202 /* Main.storyboard */,
 				ED72B0001BFF287800B84202 /* AppDelegate.h */,
 				ED72B0011BFF287800B84202 /* AppDelegate.m */,
+				ED39C81A1C678CDB00DB34BD /* AppDelegate.swift */,
+				ED39C81B1C678CDB00DB34BD /* ImagePreviewView.swift */,
+				ED39C81C1C678CDB00DB34BD /* MyAccountViewController.swift */,
+				ED39C81D1C678CDB00DB34BD /* OtherGoodTableViewController.swift */,
+				ED39C81E1C678CDB00DB34BD /* SettingsTableViewController.swift */,
+				ED39C8201C678CDB00DB34BD /* ViewControlle.swift */,
 				ED72B0031BFF287800B84202 /* ViewController.h */,
 				ED72B0041BFF287800B84202 /* ViewController.m */,
 				EDDF1DEA1C31330200BAF1CF /* MygoodViewController.swift */,
@@ -164,6 +184,7 @@
 				ED72B03A1BFF45C800B84202 /* SettingsTableViewController.m */,
 				ED72B03C1BFF494500B84202 /* SubmitViewController.h */,
 				ED72B03D1BFF494500B84202 /* SubmitViewController.m */,
+				ED39C81F1C678CDB00DB34BD /* SubmitViewController.swift */,
 				ED0A5D6A1C15A9EE00D3033D /* ImagePreviewView.h */,
 				ED0A5D6B1C15A9EE00D3033D /* ImagePreviewView.m */,
 				ED0A5D6C1C15A9EE00D3033D /* ImagePreviewView.xib */,
@@ -385,14 +406,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED39C8211C678CDB00DB34BD /* AppDelegate.swift in Sources */,
+				ED39C8221C678CDB00DB34BD /* ImagePreviewView.swift in Sources */,
 				ED72B03B1BFF45C800B84202 /* SettingsTableViewController.m in Sources */,
+				ED39C8231C678CDB00DB34BD /* MyAccountViewController.swift in Sources */,
 				ED72B0051BFF287800B84202 /* ViewController.m in Sources */,
 				ED0A5D6D1C15A9EE00D3033D /* ImagePreviewView.m in Sources */,
 				ED72B0021BFF287800B84202 /* AppDelegate.m in Sources */,
 				ED72B0381BFF457D00B84202 /* MyAccountViewController.m in Sources */,
+				ED39C8261C678CDB00DB34BD /* SubmitViewController.swift in Sources */,
+				ED39C8271C678CDB00DB34BD /* ViewControlle.swift in Sources */,
 				EDDF1DEB1C31330200BAF1CF /* MygoodViewController.swift in Sources */,
 				ED72B03E1BFF494500B84202 /* SubmitViewController.m in Sources */,
 				ED72AFFF1BFF287800B84202 /* main.m in Sources */,
+				ED39C8251C678CDB00DB34BD /* SettingsTableViewController.swift in Sources */,
+				ED39C8241C678CDB00DB34BD /* OtherGoodTableViewController.swift in Sources */,
 				ED72B0321BFF449E00B84202 /* MyGoodViewController.m in Sources */,
 				ED72B0351BFF453C00B84202 /* OtherGoodTableViewController.m in Sources */,
 			);
